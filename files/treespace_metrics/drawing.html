@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>treespace_metrics.drawing API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>treespace_metrics.drawing</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from networkx.drawing.nx_agraph import graphviz_layout
+from networkx.drawing.nx_pylab import draw_networkx_labels
+from networkx import draw_networkx_nodes, draw_networkx_edges, DiGraph
+from networkx import draw
+from networkx.exception import AmbiguousSolution, NetworkXPointlessConcept
+import matplotlib.pyplot as plt
+from textwrap import wrap
+import platform
+import matplotlib as mlt
+from treespace_metrics.utils import get_root, get_leaves, is_omnian
+
+plat = platform.system()
+
+
+def draw_tree(graph: DiGraph, tree_name=None, highlight_edges=None, color_node_type=False):
+    &#34;&#34;&#34;
+    Draw the phylogenetic network
+    https://stackoverflow.com/questions/11479624/is-there-a-way-to-guarantee-hierarchical-output-from-networkx
+
+    Args:
+        graph (DiGraph): Input phylogenetic network.
+        tree_name (str, optional): The output file name of the drawn tree. Defaults to None.
+        highlight_edges (list, optional): The edges to be highlighted in the output drawing of the tree. Defaults to None.
+        color_node_type (bool, optional): If True, colors omnian nodes red, leaves green, and the rest blue. Defaults to False.
+
+    Returns:
+        None: Saves an output file with the drawn tree.
+    &#34;&#34;&#34;
+    r = get_root(graph)
+    leaves = get_leaves(graph)
+    try:
+        pos = graphviz_layout(graph, prog=&#39;dot&#39;, root=r)
+    except ImportError:
+        print(&#34;Please install graphviz to draw the tree&#34;)
+        return
+
+    mlt.rcParams[&#39;figure.dpi&#39;] = 200
+    # For printing...
+    fig = plt.figure(figsize=(8.5, 11))
+    # fig = plt.figure(figsize=(20, 10))
+    ax = fig.add_subplot(111)
+
+    for node, data in graph.nodes(data=True):
+        try:
+            if color_node_type:
+                if is_omnian(graph, node):
+                    draw_networkx_nodes(graph, pos, node_color=&#39;red&#39;, nodelist=[node])
+                elif node in leaves:
+                    draw_networkx_nodes(graph, pos, node_color=&#39;green&#39;, nodelist=[node])
+                else:
+                    draw_networkx_nodes(graph, pos, nodelist=[node])
+            else:
+                draw_networkx_nodes(graph, pos, node_color=data[&#39;color&#39;], nodelist=[node])
+        except KeyError:
+            draw_networkx_nodes(graph, pos, nodelist=[node])
+
+    for source, target, data in graph.edges(data=True):
+        try:
+            if highlight_edges is not None:
+                if (source, target) in highlight_edges:
+                    draw_networkx_edges(graph, pos, edgelist=[(source, target)], edge_color=&#39;r&#39;, width=3)
+                else:
+                    draw_networkx_edges(graph, pos, edgelist=[(source, target)], edge_color=data[&#39;color&#39;], width=3)
+            else:
+                draw_networkx_edges(graph, pos, edgelist=[(source, target)], edge_color=data[&#39;color&#39;], width=3)
+        except KeyError:
+            draw_networkx_edges(graph, pos, edgelist=[(source, target)], width=1)
+
+    all_nodes = set(graph.nodes())
+    labels = dict(zip(all_nodes, all_nodes))
+    draw_networkx_labels(graph, pos, labels=labels)
+
+    # plt.show()
+    # Use this site to edit: https://edotor.net/
+    if tree_name is None:
+        plt.title(&#39;Phylogenetic network&#39;)
+        plt.savefig(&#39;network.png&#39;)
+    else:
+        ax.set_title(&#39;\n&#39;.join(wrap(tree_name)))
+        plt.savefig(tree_name + &#39;.png&#39;)
+    plt.close()
+
+
+def draw_bipartite(graph, matches=None, graph_name=&#34;bipartite&#34;):
+    &#34;&#34;&#34;
+    Draw a bipartite graph
+    https://stackoverflow.com/questions/35472402/how-do-display-bipartite-graphs-with-python-networkx-package
+    Args:
+        graph (Graph): The input bipartite graph.
+        matches (dict, optional): The list of edges that are matched, they will be colored red. Defaults to None.
+        graph_name (str, optional): The file name where the drawing is stored. Defaults to &#34;bipartite&#34;.
+
+    Returns:
+        None: Saves an output file with the drawn bipartite graph.
+    &#34;&#34;&#34;
+    try:
+        x = {n for n, d in graph.nodes(data=True) if d[&#39;biparite&#39;] == 0}
+        y = set(graph) - x
+        pos = dict()
+        pos.update((n, (1, i)) for i, n in enumerate(x))  # put nodes from X at x=1
+        pos.update((n, (2, i)) for i, n in enumerate(y))  # put nodes from Y at x=2
+        plt.title(&#39;Bipartite Graph - Red means edge is matched, Blue otherwise&#39;)
+        # draw(graph, pos=pos, with_labels=True, arrows=True)
+        # draw matchings
+        if matches is None:
+            draw(graph, with_labels=True, arrows=True)
+        else:
+            nodes = list(graph.nodes())
+            draw_networkx_nodes(graph, pos, nodelist=nodes)
+            matched_edges, unmatched_edges = get_edges(set(graph.edges()), matches)
+            draw_networkx_edges(graph, pos, edgelist=matched_edges, width=8, alpha=0.5, edge_color=&#39;r&#39;)
+            draw_networkx_edges(graph, pos, edgelist=unmatched_edges, width=8, alpha=0.5, edge_color=&#39;b&#39;)
+            draw_networkx_labels(graph, pos, dict(zip(nodes, nodes)))
+    except AmbiguousSolution:
+        draw(graph, with_labels=True, arrows=True)
+    except NetworkXPointlessConcept:
+        draw(graph, with_labels=True, arrows=True)
+    except KeyError:
+        draw(graph, with_labels=True, arrows=True)
+    # plt.show()
+    plt.savefig(graph_name + &#39;.png&#39;)
+    plt.close()
+
+
+def get_edges(all_edges: set, matches: dict) -&gt; [set, set]:
+    &#34;&#34;&#34;
+    Helper function for draw_bipartite. Separates the edges that are to be highlighted (matched)
+    and not highlighted (unmatched).
+
+    Args:
+        all_edges (set): Set of all edges in the bipartite graph.
+        matches (dict): A dictionary of matched edges.
+
+    Returns:
+        tuple: A tuple containing two sets:
+            - matched_edges (set): The edges that are matched.
+            - unmatched_edges (set): The edges that are not matched.
+    &#34;&#34;&#34;
+    matched_edges = set()
+    unmatched_edges = all_edges
+    for s, t in matches.items():
+        e = (s, t)
+        if e in unmatched_edges:
+            matched_edges.add((s, t))
+    unmatched_edges = unmatched_edges - matched_edges
+    return matched_edges, unmatched_edges</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="treespace_metrics.drawing.draw_bipartite"><code class="name flex">
+<span>def <span class="ident">draw_bipartite</span></span>(<span>graph, matches=None, graph_name='bipartite')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Draw a bipartite graph
+<a href="https://stackoverflow.com/questions/35472402/how-do-display-bipartite-graphs-with-python-networkx-package">https://stackoverflow.com/questions/35472402/how-do-display-bipartite-graphs-with-python-networkx-package</a></p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>graph</code></strong> :&ensp;<code>Graph</code></dt>
+<dd>The input bipartite graph.</dd>
+<dt><strong><code>matches</code></strong> :&ensp;<code>dict</code>, optional</dt>
+<dd>The list of edges that are matched, they will be colored red. Defaults to None.</dd>
+<dt><strong><code>graph_name</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>The file name where the drawing is stored. Defaults to "bipartite".</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>None</code></dt>
+<dd>Saves an output file with the drawn bipartite graph.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def draw_bipartite(graph, matches=None, graph_name=&#34;bipartite&#34;):
+    &#34;&#34;&#34;
+    Draw a bipartite graph
+    https://stackoverflow.com/questions/35472402/how-do-display-bipartite-graphs-with-python-networkx-package
+    Args:
+        graph (Graph): The input bipartite graph.
+        matches (dict, optional): The list of edges that are matched, they will be colored red. Defaults to None.
+        graph_name (str, optional): The file name where the drawing is stored. Defaults to &#34;bipartite&#34;.
+
+    Returns:
+        None: Saves an output file with the drawn bipartite graph.
+    &#34;&#34;&#34;
+    try:
+        x = {n for n, d in graph.nodes(data=True) if d[&#39;biparite&#39;] == 0}
+        y = set(graph) - x
+        pos = dict()
+        pos.update((n, (1, i)) for i, n in enumerate(x))  # put nodes from X at x=1
+        pos.update((n, (2, i)) for i, n in enumerate(y))  # put nodes from Y at x=2
+        plt.title(&#39;Bipartite Graph - Red means edge is matched, Blue otherwise&#39;)
+        # draw(graph, pos=pos, with_labels=True, arrows=True)
+        # draw matchings
+        if matches is None:
+            draw(graph, with_labels=True, arrows=True)
+        else:
+            nodes = list(graph.nodes())
+            draw_networkx_nodes(graph, pos, nodelist=nodes)
+            matched_edges, unmatched_edges = get_edges(set(graph.edges()), matches)
+            draw_networkx_edges(graph, pos, edgelist=matched_edges, width=8, alpha=0.5, edge_color=&#39;r&#39;)
+            draw_networkx_edges(graph, pos, edgelist=unmatched_edges, width=8, alpha=0.5, edge_color=&#39;b&#39;)
+            draw_networkx_labels(graph, pos, dict(zip(nodes, nodes)))
+    except AmbiguousSolution:
+        draw(graph, with_labels=True, arrows=True)
+    except NetworkXPointlessConcept:
+        draw(graph, with_labels=True, arrows=True)
+    except KeyError:
+        draw(graph, with_labels=True, arrows=True)
+    # plt.show()
+    plt.savefig(graph_name + &#39;.png&#39;)
+    plt.close()</code></pre>
+</details>
+</dd>
+<dt id="treespace_metrics.drawing.draw_tree"><code class="name flex">
+<span>def <span class="ident">draw_tree</span></span>(<span>graph: networkx.classes.digraph.DiGraph, tree_name=None, highlight_edges=None, color_node_type=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Draw the phylogenetic network
+<a href="https://stackoverflow.com/questions/11479624/is-there-a-way-to-guarantee-hierarchical-output-from-networkx">https://stackoverflow.com/questions/11479624/is-there-a-way-to-guarantee-hierarchical-output-from-networkx</a></p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>graph</code></strong> :&ensp;<code>DiGraph</code></dt>
+<dd>Input phylogenetic network.</dd>
+<dt><strong><code>tree_name</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>The output file name of the drawn tree. Defaults to None.</dd>
+<dt><strong><code>highlight_edges</code></strong> :&ensp;<code>list</code>, optional</dt>
+<dd>The edges to be highlighted in the output drawing of the tree. Defaults to None.</dd>
+<dt><strong><code>color_node_type</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>If True, colors omnian nodes red, leaves green, and the rest blue. Defaults to False.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>None</code></dt>
+<dd>Saves an output file with the drawn tree.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def draw_tree(graph: DiGraph, tree_name=None, highlight_edges=None, color_node_type=False):
+    &#34;&#34;&#34;
+    Draw the phylogenetic network
+    https://stackoverflow.com/questions/11479624/is-there-a-way-to-guarantee-hierarchical-output-from-networkx
+
+    Args:
+        graph (DiGraph): Input phylogenetic network.
+        tree_name (str, optional): The output file name of the drawn tree. Defaults to None.
+        highlight_edges (list, optional): The edges to be highlighted in the output drawing of the tree. Defaults to None.
+        color_node_type (bool, optional): If True, colors omnian nodes red, leaves green, and the rest blue. Defaults to False.
+
+    Returns:
+        None: Saves an output file with the drawn tree.
+    &#34;&#34;&#34;
+    r = get_root(graph)
+    leaves = get_leaves(graph)
+    try:
+        pos = graphviz_layout(graph, prog=&#39;dot&#39;, root=r)
+    except ImportError:
+        print(&#34;Please install graphviz to draw the tree&#34;)
+        return
+
+    mlt.rcParams[&#39;figure.dpi&#39;] = 200
+    # For printing...
+    fig = plt.figure(figsize=(8.5, 11))
+    # fig = plt.figure(figsize=(20, 10))
+    ax = fig.add_subplot(111)
+
+    for node, data in graph.nodes(data=True):
+        try:
+            if color_node_type:
+                if is_omnian(graph, node):
+                    draw_networkx_nodes(graph, pos, node_color=&#39;red&#39;, nodelist=[node])
+                elif node in leaves:
+                    draw_networkx_nodes(graph, pos, node_color=&#39;green&#39;, nodelist=[node])
+                else:
+                    draw_networkx_nodes(graph, pos, nodelist=[node])
+            else:
+                draw_networkx_nodes(graph, pos, node_color=data[&#39;color&#39;], nodelist=[node])
+        except KeyError:
+            draw_networkx_nodes(graph, pos, nodelist=[node])
+
+    for source, target, data in graph.edges(data=True):
+        try:
+            if highlight_edges is not None:
+                if (source, target) in highlight_edges:
+                    draw_networkx_edges(graph, pos, edgelist=[(source, target)], edge_color=&#39;r&#39;, width=3)
+                else:
+                    draw_networkx_edges(graph, pos, edgelist=[(source, target)], edge_color=data[&#39;color&#39;], width=3)
+            else:
+                draw_networkx_edges(graph, pos, edgelist=[(source, target)], edge_color=data[&#39;color&#39;], width=3)
+        except KeyError:
+            draw_networkx_edges(graph, pos, edgelist=[(source, target)], width=1)
+
+    all_nodes = set(graph.nodes())
+    labels = dict(zip(all_nodes, all_nodes))
+    draw_networkx_labels(graph, pos, labels=labels)
+
+    # plt.show()
+    # Use this site to edit: https://edotor.net/
+    if tree_name is None:
+        plt.title(&#39;Phylogenetic network&#39;)
+        plt.savefig(&#39;network.png&#39;)
+    else:
+        ax.set_title(&#39;\n&#39;.join(wrap(tree_name)))
+        plt.savefig(tree_name + &#39;.png&#39;)
+    plt.close()</code></pre>
+</details>
+</dd>
+<dt id="treespace_metrics.drawing.get_edges"><code class="name flex">
+<span>def <span class="ident">get_edges</span></span>(<span>all_edges: set, matches: dict) ‑> [<class 'set'>, <class 'set'>]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Helper function for draw_bipartite. Separates the edges that are to be highlighted (matched)
+and not highlighted (unmatched).</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>all_edges</code></strong> :&ensp;<code>set</code></dt>
+<dd>Set of all edges in the bipartite graph.</dd>
+<dt><strong><code>matches</code></strong> :&ensp;<code>dict</code></dt>
+<dd>A dictionary of matched edges.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>tuple</code></dt>
+<dd>A tuple containing two sets:
+- matched_edges (set): The edges that are matched.
+- unmatched_edges (set): The edges that are not matched.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_edges(all_edges: set, matches: dict) -&gt; [set, set]:
+    &#34;&#34;&#34;
+    Helper function for draw_bipartite. Separates the edges that are to be highlighted (matched)
+    and not highlighted (unmatched).
+
+    Args:
+        all_edges (set): Set of all edges in the bipartite graph.
+        matches (dict): A dictionary of matched edges.
+
+    Returns:
+        tuple: A tuple containing two sets:
+            - matched_edges (set): The edges that are matched.
+            - unmatched_edges (set): The edges that are not matched.
+    &#34;&#34;&#34;
+    matched_edges = set()
+    unmatched_edges = all_edges
+    for s, t in matches.items():
+        e = (s, t)
+        if e in unmatched_edges:
+            matched_edges.add((s, t))
+    unmatched_edges = unmatched_edges - matched_edges
+    return matched_edges, unmatched_edges</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="treespace_metrics" href="index.html">treespace_metrics</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="treespace_metrics.drawing.draw_bipartite" href="#treespace_metrics.drawing.draw_bipartite">draw_bipartite</a></code></li>
+<li><code><a title="treespace_metrics.drawing.draw_tree" href="#treespace_metrics.drawing.draw_tree">draw_tree</a></code></li>
+<li><code><a title="treespace_metrics.drawing.get_edges" href="#treespace_metrics.drawing.get_edges">get_edges</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
