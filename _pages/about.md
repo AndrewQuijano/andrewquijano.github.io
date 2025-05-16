@@ -1,56 +1,26 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Andrew Quijano's personal website!"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+Hi, I'm Andrew Quijano, a researcher, educator, and industry professional passionate about cybersecurity. I am currently a PhD candidate at New York University, where my research focuses on planting triggerable, verified vulnerabilities into existing program source code. This work has applications in benchmarking the ability of software security tools to detect vulnerabilities and in automatically generating cybersecurity challenges for education. 
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+In the private sector, I began my career as a Security Testing Analyst at JRI-America, where I worked on security automation and vulnerability remediation. Then I worked at Amazon, where I am an Application Security Engineer, reviewing Amazon applications for security issues. Currently, I am working at Fitch Ratings in the Vulnerability Management team, assisting with automation and ensuring timely remediation of backlogged vulnerabilities.
 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+My past research interests have been diverse. I started my research career with [Kemal Akkaya](https://egr.vcu.edu/directory/kemal.akkaya/) at FIU, where I built a new [secure indoor localization system](https://andrewquijano.github.io/publication/2019-11-04-secure-indoor-localization-1). Then, I took a slight segue into research on computational biology, where, during the COVID lockdown, I had the general intuition to [solve the problem of cutting the minimal number of nodes to make a phylogenetic network tree-based](https://andrewquijano.github.io/publication/2020-11-26-max-cst-2). During my graduate education at Columbia University, I worked with [Professor Steven Bellovin](https://www.cs.columbia.edu/~smb/) in his seminar on anonymity class, where, with my team, [we published a paper in a law journal](https://andrewquijano.github.io/publication/2021-12-30-deep-fakes-3) investigating the feasibility of using copyright law to protect a victim from deep fake non-consensual pornography. When I started my PhD, I began collaborating with Professor [Kemal Akkaya](https://egr.vcu.edu/directory/kemal.akkaya/) again, and we published work on [secure decision tree evaluation](https://andrewquijano.github.io/publication/2024-11-22-level-site-ppdt-5) and [drone collision avoidance](https://andrewquijano.github.io/publication/2024-10-08-drone-collision-avoidance-4) using homomorphic encryption. Finally, I am currently working on publishing my paper from MITLL, which is about using SysML to measure RTO/RPO compliance of an application, informing application owners on where to place security controls to maximize business continuity requirements.
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your Markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the Markdown files! You can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+My current research focuses on [LAVA](https://andrewquijano.github.io/portfolio/portfolio-3/). LAVA is a tool first built by [Brendan Dolan-Gavitt](https://www.linkedin.com/in/brendan-dolan-gavitt-3b68154) that is used to plant buffer overflows in C code. Currently, aside from clearing the technical debt, I want to investigate three improvements to LAVA:
 
-For those users that need more advanced functionality, the template also supports the following popular tools:
-- [MathJax](https://www.mathjax.org/) for mathematical equations
-- [Mermaid](https://mermaid.js.org/) for diagraming
-- [Plotly](https://plotly.com/javascript/) for plotting
+* Improving path realism: Currently, LAVA can only plant bugs along the lines of code that are executed by a file input. Utilizing angr, the hope is to use concolic execution to generate new inputs, which should allow LAVA to plant more bugs in less predictable places in source code.
+* Realistic Bug Injection: Given how much LLMs have improved, and that code-generating LLMs are trained on massive datasets like GitHub, I want to integrate LAVA with an LLM to create more realistic bugs.
+* Automated Exploit Generation: LAVA currently can plant the vulnerability and the trigger. However, it can't generate a security exploit. This would be especially useful to confirm the vulnerability is correctly planted and make LAVA useful for Capture the Flag (CTF) challenges. 
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](https://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+As an educator, I strive to create an engaging and inclusive learning environment. Drawing from my private sector experience, I incorporate real-world examples into my teaching to help students connect theoretical concepts to practical applications. I have served as a Teaching Assistant for courses such as Security I, Security II, and Computer Networks, where I supported students in mastering complex concepts and developing practical skills. I also taught at NYU for 3 semesters from Fall 2023 to Spring 2024, where I brought some course improvements such as autograders and a course material refresh to stay more up to date.
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+I have published and presented my research at IEEE MASS, IPCCC, and LCN. My teaching efforts have been recognized by my students, and my course material is still used in NYU's Application Security course. You can find more about my [research](https://andrewquijano.github.io/publications/) and [teaching](https://andrewquijano.github.io/teaching/).
 
-Create content & metadata
-------
-For site content, there is one Markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a Markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each Markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
-
-**Markdown generator**
-
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual Markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the Markdown files, then commit and push them to the GitHub repository.
-
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and Markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
-
-Example: editing a Markdown file for a talk
-![Editing a Markdown file for a talk](/images/editing-talk.png)
-
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+Outside of academia, I enjoy exploring my hometown, New York City, with my friends. I also occasionally enjoy watching shows, such as *The Three-Body Problem* and *Spy X Family*. I also enjoy listening to music; I especially love Jazz and LoFi. I’m always excited to connect with others who share similar interests!
