@@ -27,7 +27,8 @@ title = ""
 # Perform geolocation
 for file in g:
     # Read the file
-    data = frontmatter.load(file)
+    with open(file, 'r', encoding='utf-8') as f:
+        data = frontmatter.load(f)
     data = data.to_dict()
 
     # Press on if the location is not present
